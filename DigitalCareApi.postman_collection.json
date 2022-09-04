@@ -1,0 +1,857 @@
+{
+	"info": {
+		"_postman_id": "64a068e3-3cbf-4cdc-8abc-c058734f6949",
+		"name": "DigitalCareApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17691798"
+	},
+	"item": [
+		{
+			"name": "Paciente",
+			"item": [
+				{
+					"name": "PacienteList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/paciente",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"paciente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PacienteGetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/paciente/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"paciente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PacienteCreate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Severino Ian Edson Peixoto\",\r\n    \"cpf\": \"16770851423\",\r\n    \"dataNascimento\": \"1965-07-22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/paciente",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"paciente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PacienteDeleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/paciente/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"paciente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PacienteUpdate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"nome\": \"Severino Ian Edson Peixoto\",\r\n    \"cpf\": \"16770851423\",\r\n    \"dataNascimento\": \"1990-09-22\",\r\n    \"dataCadastro\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/paciente/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"paciente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endereco",
+			"item": [
+				{
+					"name": "EnderecoList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/endereco",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"endereco"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EnderecoGetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/endereco/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"endereco",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EnderecoCreate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"logradouro\": \"Rua Vinte e Um\",\r\n    \"numero\": 746,\r\n    \"cep\": \"24859572\",\r\n    \"bairro\": \"Marambaia (Manilha)\",\r\n    \"municipio\": \"Itaboraí\",\r\n    \"siglaEstado\": \"RJ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/endereco",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"endereco"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EnderecoDeleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/endereco/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"endereco",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EnderecoUpdate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"logradouro\": \"Rua Vinte e Um\",\r\n    \"numero\": 800,\r\n    \"complemento\": null,\r\n    \"cep\": \"24859572\",\r\n    \"bairro\": \"Marambaia (Manilha)\",\r\n    \"municipio\": \"Itaboraí\",\r\n    \"siglaEstado\": \"RJ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/endereco/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"endereco",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contatos",
+			"item": [
+				{
+					"name": "ContatosList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/contatos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"contatos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ContatoById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/contatos/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"contatos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ContatoCreate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ddd\": \"22\",\r\n    \"telefone\": \"994448809\",\r\n    \"email\": \"claudio74@afujita.com.br\",\r\n    \"paciente\" : {\r\n            \"id\": 2,\r\n            \"nome\": \"Breno Manoel Cavalcanti\",\r\n            \"cpf\": \"30665822138\",\r\n            \"dataNascimento\": \"1988-09-03\",\r\n            \"dataCadastro\": null\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/contatos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"contatos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ContatoDeleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/contatos/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"contatos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ContatoUpdate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"ddd\": \"11\",\r\n    \"telefone\": \"994448809\",\r\n    \"email\": \"claudio74@afujita.com.br\",\r\n    \"paciente\" : {\r\n            \"id\": 2,\r\n            \"nome\": \"Breno Manoel Cavalcanti\",\r\n            \"cpf\": \"30665822138\",\r\n            \"dataNascimento\": \"1988-09-03\",\r\n            \"dataCadastro\": null\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/contatos/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"contatos",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sintoma",
+			"item": [
+				{
+					"name": "SintomaList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/sintoma",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sintoma"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SintomaById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/sintoma/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sintoma",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SintomaCreate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sintoma\": \"Coriza\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/sintoma",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sintoma"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SintomaDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/sintoma/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sintoma",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SintomaUpdate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"sintoma\": \"Fadiga\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/sintoma/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sintoma",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Atendimento",
+			"item": [
+				{
+					"name": "AtendimentoList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/atendimento",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"atendimento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtendimentoById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/atendimento/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"atendimento",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtendimentoCreate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": \"2022-04-05T10:15:00\",\r\n    \"classificacaoRisco\": \"AMARELO\",\r\n    \"paciente\" : {\r\n        \"id\": 2,\r\n        \"nome\": \"Breno Manoel Cavalcanti\",\r\n        \"cpf\": \"30665822138\",\r\n        \"dataNascimento\": \"1988-09-03\",\r\n        \"dataCadastro\": null\r\n    },\r\n    \"medico\": {\r\n        \"id\": 2,\r\n        \"nome\": \"Clara Ayla Costa\",\r\n        \"crm\": \"54321\",\r\n        \"dataAdmissao\": \"2019-11-28\",\r\n        \"dataSaida\": null\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/atendimento",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"atendimento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtendimentoDeleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/atendimento/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"atendimento",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtendimentoUpdate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"data\": \"2022-05-18T10:15:00\",\r\n    \"classificacaoRisco\": \"AZUL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/atendimento/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"atendimento",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Medico",
+			"item": [
+				{
+					"name": "MedicoList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/medico",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"medico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MedicoById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/medico/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"medico",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MedicoCreate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Lívia Lara Novaes\",\r\n    \"crm\": \"987654\",\r\n    \"dataAdmissao\": \"2017-03-05\",\r\n    \"dataSaida\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/medico",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"medico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MedicoDeleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/medico/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"medico",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MedicoUpdate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"nome\": \"Lívia Lara Novaes\",\r\n    \"crm\": \"654321\",\r\n    \"dataAdmissao\": \"2017-03-05\",\r\n    \"dataSaida\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/medico/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"medico",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SintomasAtendimento",
+			"item": [
+				{
+					"name": "SintomasAtendimentoList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/sintomasatendimento",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sintomasatendimento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SintomasAtendimentoById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/sintomasatendimento/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sintomasatendimento",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SintomasAtendimentoCreate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sintoma\": {\r\n        \"id\": 2,\r\n        \"sintoma\": \"Tosse\"\r\n    },\r\n    \"atendimento\": {\r\n        \"id\": 3,\r\n        \"data\": \"2022-05-07T10:15:00\",\r\n        \"classificacaoRisco\": \"AMARELO\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/sintomasatendimento",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sintomasatendimento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SintomasAtendimentoDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/sintomasatendimento/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sintomasatendimento",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SintomasAtendimentoUpdate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 6,\r\n    \"sintoma\": {\r\n        \"id\": 2,\r\n        \"sintoma\": \"Tosse\"\r\n    },\r\n    \"atendimento\": {\r\n        \"id\": 4,\r\n        \"data\": \"2022-05-23T10:15:00\",\r\n        \"classificacaoRisco\": \"AZUL\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/sintomasatendimento/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sintomasatendimento",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
