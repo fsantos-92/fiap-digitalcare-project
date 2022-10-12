@@ -8,6 +8,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import br.com.hybridinnovation.digitalcare.model.Atendimento;
 import br.com.hybridinnovation.digitalcare.model.ClassificacaoRisco;
@@ -15,8 +16,10 @@ import br.com.hybridinnovation.digitalcare.model.Contatos;
 import br.com.hybridinnovation.digitalcare.model.Endereco;
 import br.com.hybridinnovation.digitalcare.model.Medico;
 import br.com.hybridinnovation.digitalcare.model.Paciente;
+import br.com.hybridinnovation.digitalcare.model.Role;
 import br.com.hybridinnovation.digitalcare.model.Sintoma;
 import br.com.hybridinnovation.digitalcare.model.SintomaAtendimento;
+import br.com.hybridinnovation.digitalcare.model.User;
 import br.com.hybridinnovation.digitalcare.repository.AtendimentoRepository;
 import br.com.hybridinnovation.digitalcare.repository.ContatosRepository;
 import br.com.hybridinnovation.digitalcare.repository.EnderecoRepository;
@@ -24,6 +27,7 @@ import br.com.hybridinnovation.digitalcare.repository.MedicoRepository;
 import br.com.hybridinnovation.digitalcare.repository.PacienteRepository;
 import br.com.hybridinnovation.digitalcare.repository.SintomaAtendimentoRepository;
 import br.com.hybridinnovation.digitalcare.repository.SintomaRepository;
+import br.com.hybridinnovation.digitalcare.repository.UserRepository;
 
 
 @Configuration
@@ -43,6 +47,12 @@ public class DatabaseSeed implements CommandLineRunner {
     SintomaRepository sintomaRepository;
     @Autowired
     SintomaAtendimentoRepository sintomaAtendimentoRepository;
+
+    @Autowired
+    UserRepository userRepository;
+
+    @Autowired
+    PasswordEncoder passwordEncoder;
 
     @Override
     public void run(String... args) throws Exception {
@@ -107,6 +117,22 @@ public class DatabaseSeed implements CommandLineRunner {
         atendimentoRepository.saveAll(List.of(atendimento1, atendimento2, atendimento3, atendimento4));
         sintomaRepository.saveAll(List.of(sintoma1, sintoma2, sintoma3, sintoma4));
         sintomaAtendimentoRepository.saveAll(List.of(sintomaAtendimento1, sintomaAtendimento2, sintomaAtendimento3, sintomaAtendimento4, sintomaAtendimento5));
+
+        userRepository.save(
+            new User()
+                .name("Felipe")
+                .email("felipe@fiap.com.br")
+                .password(passwordEncoder.encode("123"))
+                .withRole(new Role("ROLE_ADMIN"))
+        );
+
+        userRepository.save(
+            new User()
+                .name("Pedro")
+                .email("pedro@fiap.com.br")
+                .password(passwordEncoder.encode("123"))
+                .withRole(new Role("ROLE_USER"))
+        );
     }
     
 }
